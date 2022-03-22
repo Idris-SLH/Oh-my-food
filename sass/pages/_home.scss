@@ -1,46 +1,67 @@
-.about {
-    width: 100%;
-    display: grid;
-    grid-template-columns: 2fr 5fr; 
-    grid-template-rows: repeat(3, auto);
-    padding: $grid-gutter;
-    grid-template-areas:
-        "imagery heading"
-        "imagery copy"
-        "imagery btn";
-    margin-bottom: $grid-gutter;
-    &__heading {
-        grid-area: heading;
-        color: $colour-white;
-        @include heading-shadow;
-        text-align: right;
-        padding-right: $grid-gutter;
-    }
-    &__imagery {
-        grid-area: imagery;
-    }
-    &__pic {
-        overflow:hidden;
-        width: 80%;
-        border-radius: 1000rem;
-        border: 1.5rem solid $colour-primary;
-        & img {
-            display: block;
-            width: 100%;
+.info_box {
+    display: flex;
+    flex-direction: column;
+    #location {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: rgb(231, 231, 231);
+        font-weight: bold;
+        color: rgb(77, 77, 77);
+        .fa-solid {
+            padding: 10px;
+            position: absolute;
+            margin-right: 150px;
         }
     }
-    &__copy {
-        grid-area: copy;
-        & p{
-            line-height: 2rem*1.2;
-            margin-bottom: $grid-gutter*2.25;
-        } 
+    #info {
+        background-color: rgb(240, 240, 240);
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        padding: 10%;
     }
-    &__btn{
-        @include btn;
-        grid-area: btn;
-        & a {
-            text-decoration: none;
+}
+
+.fonctionnement {
+    margin: 20px;
+    div {
+        margin: 20px 5px;
+    }
+}
+
+.bubble {
+    margin: auto;
+    
+    > p {
+        color: white;
+        background-color: $color-primary;
+        border-radius: 50%;
+        font-size: smaller;
+        padding: 3px;
+        width: 23px;
+        text-align: center;
+        margin: 20px -10px;
+        position: absolute;
+    }
+    span {
+        background-color: rgb(240, 240, 240);
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        border-radius: 20px;
+        box-shadow: 0px 5px 10px rgb(224, 224, 224);
+        padding: 7px;
+        font-weight: bold;
+        > :first-child {
+            color: gray;
+        }
+        &:hover {
+            background-color: lighten($color-primary, 35);
+            > :first-child {
+                color: $color-primary;
+            }
         }
     }
 }
+

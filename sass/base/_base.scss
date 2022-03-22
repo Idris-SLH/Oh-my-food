@@ -1,17 +1,12 @@
-*,
-*::after,
-*::before {
-    margin: 0;
-    padding: 0;
-    box-sizing: inherit;
-}
-
-html {
-    // 10px div by def of 16px
-    font-size: 62.5%;
+/* PAGE */
+* {
+    box-sizing: border-box; /* Opera/IE 8+ */
+    -moz-box-sizing: border-box; /* Firefox, autres Gecko */
+    -webkit-box-sizing: border-box; /* Safari/Chrome, autres WebKit */
+   /* box-sizing est appliquÃƒÂ© ÃƒÂ  tous les ÃƒÂ©lÃƒÂ©ments */
 }
 
 body {
-    box-sizing: border-box;
-    background: $colour-secondary;
+    max-width: 1200px;
+    margin: auto;
 }
