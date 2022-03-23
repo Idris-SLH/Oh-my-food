@@ -1,0 +1,34 @@
+/* FAVORIS */
+
+.fa-heart {
+    font-size: x-large;
+    cursor: pointer;
+    position: absolute;
+    z-index: 1;
+    + .fa-solid {
+        background: -webkit-linear-gradient($color-primary, $color-secondary);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        z-index: 0;
+        opacity: 0; 
+    }
+    &:hover {
+        opacity: 0;
+        + .fa-solid {
+            opacity: 1;
+        }
+    }
+}
+
+.card {
+    .fa-heart {
+        right: 20px;
+        bottom: 30px;
+    }
+}
+
+.title {
+    .fa-heart {
+        right: 20px;
+    }
+}

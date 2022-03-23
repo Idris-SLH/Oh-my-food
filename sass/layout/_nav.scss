@@ -1,3 +1,5 @@
+/* BARRE DE NAVIGATION */
+
 nav {
     background-color: white;
     display: flex;
@@ -5,8 +7,14 @@ nav {
     padding: 10px;
     box-shadow: 0px -6px 8px 5px grey;
     position: relative;
+    align-items: center;
     img {
         max-width: 50%;
+    }
+    i {
+        font-size: large;
+        position: absolute;
+        left: 20px;
     }
 }
 

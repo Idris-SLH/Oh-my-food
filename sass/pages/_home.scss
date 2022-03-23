@@ -1,67 +1,36 @@
-.info_box {
+/* ACCUEIL */
+
+#info_box {
     display: flex;
     flex-direction: column;
     #location {
         display: flex;
         justify-content: center;
         align-items: center;
-        background-color: rgb(231, 231, 231);
+        background-color: #e7e7e7;
         font-weight: bold;
-        color: rgb(77, 77, 77);
+        color: #4d4d4d;
         .fa-solid {
             padding: 10px;
             position: absolute;
             margin-right: 150px;
         }
+        p {
+            cursor: pointer;
+        }
     }
     #info {
-        background-color: rgb(240, 240, 240);
+        background-color: #f0f0f0;
         text-align: center;
-        display: flex;
-        flex-direction: column;
         padding: 10%;
     }
 }
 
-.fonctionnement {
-    margin: 20px;
-    div {
-        margin: 20px 5px;
-    }
+#fonctionnement {
+    padding: 20px 20px;
+    position: relative;
 }
-
-.bubble {
-    margin: auto;
-    
-    > p {
-        color: white;
-        background-color: $color-primary;
-        border-radius: 50%;
-        font-size: smaller;
-        padding: 3px;
-        width: 23px;
-        text-align: center;
-        margin: 20px -10px;
-        position: absolute;
-    }
-    span {
-        background-color: rgb(240, 240, 240);
-        display: flex;
-        align-items: center;
-        justify-content: space-evenly;
-        border-radius: 20px;
-        box-shadow: 0px 5px 10px rgb(224, 224, 224);
-        padding: 7px;
-        font-weight: bold;
-        > :first-child {
-            color: gray;
-        }
-        &:hover {
-            background-color: lighten($color-primary, 35);
-            > :first-child {
-                color: $color-primary;
-            }
-        }
-    }
+#restaurants {
+    padding: 20px 20px;
+    background-color: #f0f0f0;
 }
-

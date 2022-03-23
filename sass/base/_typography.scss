@@ -1,11 +1,27 @@
-
+/* POLICES ET TAILLES */
 body {
     font-family: 'Roboto', sans-serif;
 }
 
 h1 {
     font-family: 'Shrikhand', cursive; 
+    font-weight: 100;
 }
-h2 {
-    margin: 3px;
+
+a {
+    text-decoration: none;
+    color: currentColor;
+    display: contents;
+}
+span {
+    > p:first-child {
+        font-weight: bold;
+    }
+}
+
+footer {
+    p {
+        font-family: 'Shrikhand', cursive; 
+        font-size: large;
+    }
 }

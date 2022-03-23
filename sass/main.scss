@@ -5,9 +5,13 @@
 @import "./base/base";
 @import "./base/typography";
 
+@import "./components/bubble";
 @import "./components/button";
+@import "./components/card";
+@import "./components/heart";
 
 @import "./layout/nav";
+@import "./layout/footer";
 
 @import "./pages/home";
 @import "./pages/menu";
