@@ -1,34 +1,19 @@
 /* FAVORIS */
-
-.fa-heart {
-    font-size: x-large;
+.heart {
     cursor: pointer;
-    position: absolute;
-    z-index: 1;
-    + .fa-solid {
+    font-size: x-large;
+    .heart__full {
         background: -webkit-linear-gradient($color-primary, $color-secondary);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
-        z-index: 0;
-        opacity: 0; 
-    }
-    &:hover {
         opacity: 0;
-        + .fa-solid {
+        position: absolute;
+        z-index: 1;
+        &:hover {
             opacity: 1;
+            + .heart__empty {
+                opacity: 0;
+            }
         }
-    }
-}
-
-.card {
-    .fa-heart {
-        right: 20px;
-        bottom: 30px;
-    }
-}
-
-.title {
-    .fa-heart {
-        right: 20px;
     }
 }

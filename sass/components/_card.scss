@@ -5,7 +5,6 @@
     margin: 30px auto;
     position: relative;
     cursor: pointer;
-
     img {
         height: 170px;
         object-fit: cover;
@@ -23,7 +22,6 @@
         position: absolute;
         right: 10px;
     }
-    
     div {
         background-color: white;
         padding: 5px 15px;
@@ -31,5 +29,8 @@
         border-bottom-left-radius: 1em;
         border-bottom-right-radius: 1em;
         box-shadow: 0px 5px 10px #dddddd;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
     }
 }

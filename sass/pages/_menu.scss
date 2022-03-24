@@ -1,5 +1,4 @@
 /* PAGES RESTAURANTS */
-
 #background {
     img {
         height: 250px;
@@ -17,9 +16,14 @@
     margin-top: -50px;
     position: relative;
     .title {
-        display: flex;
         position: relative;
+        display: flex;
+        justify-content: space-between;
         align-items: center;
+    }
+    .btn {
+        padding: 0px 50px;
+        margin-bottom: 10%;
     }
 }
 
@@ -30,31 +34,63 @@
         color: gray;
         text-transform: uppercase;
         span {
-            border-bottom: solid 3px lightgreen;
+            border-bottom: solid 3px $color-tertiary;
         }
     }
     &__box {
         cursor: pointer;
         background-color: white;
-        line-height: 4px;
-        padding: 2px 10px;
+        padding: 2px 50px 2px 10px;
         margin-bottom: 15px;
-        position: relative;
         border-radius: 0.8rem;
-        font-weight: bold;
-        font-size: small;
         box-shadow: 0px 5px 10px #dddddd;
-        &--dishe {
-            font-size: medium;
+        position: relative;
+        overflow: hidden;
+        font-weight: bold;
+        p {
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
+            margin: 10px auto;
         }
         &--recipe {
             font-weight: normal;
         }
         &--price {
             position: absolute;
-            right: 10px;
+            right: 20px;
             bottom: 0px;
-            color: #4d4d4d;
+            transition:  300ms ease-in-out 100ms;
+        }
+        &--validate {
+            font-size: x-large;
+            color: white;
+            position: absolute;
+            right: -70px;
+            bottom: 0px;
+            height: 100%;
+            width: 70px;
+            border-top-right-radius: 0.8rem;
+            border-bottom-right-radius: 0.8rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color:$color-tertiary;
+            transition: 400ms ease-in-out;
+        }
+        &:hover {
+            padding-right: 120px;
+            .menu__box--price {
+                right: 80px;
+            }
+            .menu__box--validate {
+                right: 0px;
+                .fa-circle-check {
+                    transform: rotate(360deg);
+                    transition: transform 700ms;
+                }
+            }
+
         }
     }
 }

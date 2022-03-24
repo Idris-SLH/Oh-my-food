@@ -10,7 +10,7 @@
         background-color: #e7e7e7;
         font-weight: bold;
         color: #4d4d4d;
-        .fa-solid {
+        .fa-location-dot {
             padding: 10px;
             position: absolute;
             margin-right: 150px;
@@ -23,6 +23,9 @@
         background-color: #f0f0f0;
         text-align: center;
         padding: 10%;
+        .btn {
+            padding: 0px 50px;
+        }
     }
 }
 
@@ -31,6 +34,7 @@
     position: relative;
 }
 #restaurants {
-    padding: 20px 20px;
+    padding: 20px ;
     background-color: #f0f0f0;
 }
+
