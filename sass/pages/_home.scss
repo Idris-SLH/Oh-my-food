@@ -1,4 +1,37 @@
 /* ACCUEIL */
+#loading {
+    background-color: rgba(211, 211, 211, 1);
+    background: radial-gradient(circle, rgb(247, 247, 247) 0%, rgb(189, 189, 189) 100%);
+    position: relative;
+    opacity: 1;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 99;
+    position: fixed;
+    font-size: xx-large;        
+    animation: fade .8s both 4.2s ;
+    &__icon {
+        position: absolute;
+        top: 45%;
+        right: 45%;
+        width: 28px;
+        height: 32px;   
+        animation: rotating .5s 3.5s, fade .8s 3.9s;
+    }
+    .utensils-empty {
+        color: #4d4d4d;
+        position: absolute;
+        overflow: hidden;
+        height: 100%;
+        animation: loading 2s forwards 1s;       
+    }
+    .utensils-full {
+        color: $color-primary;
+        position: absolute;
+    }
+}
 
 #info_box {
     display: flex;

@@ -1,0 +1,8 @@
+@mixin menu_box {
+    @each $var in $vars {
+        &:nth-child(#{$var}) {
+            $var : ($var * 150);
+            animation: menu_show 1000ms both #{$var}ms; 
+        }        
+    } 
+}
