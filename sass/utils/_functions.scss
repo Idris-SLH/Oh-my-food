@@ -1,13 +1,25 @@
 @keyframes menu_show {
     0% {
-            top: 10px;
-            opacity: 0;
+        top: 10px;
+        opacity: 0;
     }
     100% {
-            top: 0px;
-            opacity: 1;
+        top: 0px;
+        opacity: 1;
     }
 }
+
+@keyframes menu_show_tablet {
+    0% {
+        left: 50px;
+        opacity: 0;
+    }
+    100% {
+        left: 0px;
+        opacity: 1;
+    }
+}
+
 
 @keyframes loading {
     0% {
@@ -48,4 +60,13 @@
         transform: rotate(360deg);        
         transition: transform 500ms 3.5s; 
     }    
+}
+
+@keyframes location {
+    0% {
+        top: 4px; 
+    }
+    100% {
+        top: 8px;
+    }
 }

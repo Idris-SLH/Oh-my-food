@@ -5,15 +5,28 @@ footer {
     width: 100%;
     left: 0;
     color: white;
+    padding-bottom: 20px;
+    box-shadow: rgb(0 0 0 / 15%) 0px -8px 10px 0px;
     #footer {
         &__box {
-            display: flex;
-            flex-direction: column;
             margin-left: 25px;
+            @include mobile-only {
+                text-align: center;
+                margin: auto;
+            }
             ul {
+                display: flex;
+                justify-content: space-evenly;
+                flex-direction: column;
+                text-align: left;
                 padding: 0px;
                 list-style-type: none;
                 line-height: 30px;
+                @include mobile-only {
+                    flex-direction: row;
+                    max-width: 1200px;
+                    margin: auto;
+                }
                 li {
                     i {
                     padding-right: 10px;
@@ -22,6 +35,7 @@ footer {
                     &:hover {
                         cursor: pointer;
                         text-decoration: underline;
+                        font-weight: bold;
                     }
                 }
             }

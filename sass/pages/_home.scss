@@ -14,8 +14,8 @@
     animation: fade .8s both 4.2s ;
     &__icon {
         position: absolute;
-        top: 45%;
-        right: 45%;
+        top: 50%;
+        right: 50%;
         width: 28px;
         height: 32px;   
         animation: rotating .5s 3.5s, fade .8s 3.9s;
@@ -33,41 +33,86 @@
     }
 }
 
-#info_box {
+#info {
     display: flex;
     flex-direction: column;
-    #location {
+    &__zone {
+        background-color: #e7e7e7;
         display: flex;
         justify-content: center;
-        align-items: center;
-        background-color: #e7e7e7;
-        font-weight: bold;
-        color: #4d4d4d;
-        .fa-location-dot {
-            padding: 10px;
-            position: absolute;
-            margin-right: 150px;
+        &__location {
+            @include location;
         }
-        p {
-            cursor: pointer;
+        @include tablet-only {
+            display: none;
         }
     }
-    #info {
+    &__box {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
         background-color: #f0f0f0;
+        box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
         text-align: center;
-        padding: 10%;
-        .btn {
+        padding: 40px;
+        @include tablet-only {
+            margin: 20px;
+            margin-top: 0px;
+            border-bottom-left-radius: 30px;
+            border-bottom-right-radius: 30px;
+        }
+        &--logo {
+            width: 32%;
+            display: none;
+            @include tablet-only {
+                display: initial;
+            }
+        }
+        &__location {
+            @include location;
+            display: none;
+            @include tablet-only {
+                display: initial;
+                box-shadow: 0px 0px 10px #cfcfcf4f;
+            }
+        }
+        &--btn {
+            @include button;
             padding: 0px 50px;
         }
     }
 }
 
 #fonctionnement {
-    padding: 20px 20px;
+    margin: auto 40px 20px 20px ;
     position: relative;
+    &__box {
+        display: flex;
+        flex-direction: column;
+        @include tablet-only {
+            flex-direction: row;
+        }
+    }
 }
-#restaurants {
+
+#restaurant {
     padding: 20px ;
     background-color: #f0f0f0;
+    box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
+    @include tablet-only {
+        margin: 20px;
+        margin-bottom: 0px;
+        border-top-left-radius: 30px;
+        border-top-right-radius: 30px;
+    }
+    &__card {
+        @include tablet-only {
+            display: flex;
+            flex-wrap: wrap;
+            margin: 14px auto;
+        }
+    }
 }
+
+
 

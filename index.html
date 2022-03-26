@@ -29,54 +29,65 @@
         <!-- CORPS DE PAGE -->
         <main>
             <!-- SECTION LOCALISATION -->
-            <section id="info_box">
+            <section id="info">
                 <!-- Localisation -->
-                <div id="location">
-                    <i class="fa-solid fa-location-dot"></i>
-                    <p>Paris, Bellevile</p>
+                <div id="info__zone">
+                    <div id="info__zone__location">
+                        <p id="info__zone__location--city">Paris, Bellevile</p>
+                        <i class="fa-solid fa-location-dot" id="info__zone__location--icon"></i>
+                    </div>
                 </div>
                 <!-- Info -->
-                <div id="info">
+                <div id="info__box">
+                    <img id="info__box--logo" src="./public/images/logo/ohmyfood.png" alt="logo">
                     <h2>Réservez le menu qui vous convient</h2>
                     <p>Découvrez des restaurants d'exception, séléctionnés par nos soins.</p>
-                    <a href="#restaurants">
-                        <div class="btn">
+                    <div id="info__box__location">
+                        <p id="info__box__location--city">Paris, Bellevile</p>
+                        <i class="fa-solid fa-location-dot" id="info__box__location--icon"></i>
+                    </div>
+                    <div id="info__box--btn">
+                        <a href="#restaurant">
                             <p>Explorer nos restaurants</p>
-                        </div>
-                    </a>
+                        </a>
+                    </div>
+                    
                 </div>
             </section>
             <!-- SECTION FONCTIONNEMENT -->
             <section id="fonctionnement">
                 <h2>Fonctionnement</h2>
                 <!-- BULLES -->
-                <div class="bubble">
-                    <p>1</p>
-                    <i class="fa-solid fa-mobile-screen-button"></i>
-                    <p>Choisissez un restaurant</p>
-                </div>
-                <div class="bubble">
-                    <p>2</p>
-                    <i class="fa-solid fa-list-ul"></i>
-                    <p>Composez votre menu</p>
-                </div>
-                <div class="bubble">
-                    <p>3</p>
-                    <i class="fa-solid fa-store"></i>
-                    <p>Dégustez au restaurant</p>
+                <div id="fonctionnement__box">
+                    <div class="bubble">
+                        <p class="bubble__num">1</p>
+                        <i class="fa-solid fa-mobile-screen-button bubble__icon"></i>
+                        <p class="bubble__text">Choisissez un restaurant</p>
+                    </div>
+                    <div class="bubble">
+                        <p class="bubble__num">2</p>
+                        <i class="fa-solid fa-list-ul bubble__icon"></i>
+                        <p class="bubble__text">Composez votre menu</p>
+                    </div>
+                    <div class="bubble">
+                        <p class="bubble__num">3</p>
+                        <i class="fa-solid fa-store bubble__icon"></i>
+                        <p class="bubble__text">Dégustez au restaurant</p>
+                    </div>
                 </div>
             </section>
 
             <!-- SECTION RERSTAURANTS -->
-            <section id="restaurants">
+            <section id="restaurant">
                 <h2>Restaurants</h2>
                 <!-- CARTES RERSTAURANTS -->
+                <div id="restaurant__card">
                     <div class="card">
                         <a href="./la-palette-du-gout.html">
-                            <img src="./public/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" />
+                            <img class="card__img" src="./public/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" />
                         </a>
-                        <p class="new">Nouveau</p>
-                        <div>
+                        <p class="card__new">Nouveau</p>
+                        <div class="card__body">
                             <a href="./la-palette-du-gout.html">
                                 <span>
                                     <p>La palette du goût</p>
@@ -84,17 +95,17 @@
                                 </span>
                             </a>
                             <span class="heart">
-                                <i class="fa-solid fa-heart heart__full"></i>
-                                <i class="fa-regular fa-heart heart__empty"></i>
+                                <i class="fa-solid fa-heart heart--full"></i>
+                                <i class="fa-regular fa-heart heart--empty"></i>
                             </span>
                         </div>
                     </div>
                     <div class="card">
                         <a href="./la-note-enchantee.html">
-                            <img src="./public/images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg" /> 
+                            <img class="card__img" src="./public/images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg" /> 
                         </a>
-                        <p class="new">Nouveau</p>
-                        <div>
+                        <p class="card__new">Nouveau</p>
+                        <div class="card__body">
                             <a href="./la-note-enchantee.html">
                                 <span>
                                     <p>La note enchantée</p>
@@ -102,16 +113,16 @@
                                 </span>
                             </a>
                             <span class="heart">
-                                <i class="fa-solid fa-heart heart__full"></i>
-                                <i class="fa-regular fa-heart heart__empty"></i>
+                                <i class="fa-solid fa-heart heart--full"></i>
+                                <i class="fa-regular fa-heart heart--empty"></i>
                             </span>
                         </div>
                     </div>                        
                     <div class="card">
                         <a href="./a-la-francaise.html">
-                            <img src="./public/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" /> 
+                            <img class="card__img" src="./public/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" /> 
                         </a>
-                        <div>
+                        <div class="card__body">
                             <a href="./a-la-francaise.html">
                                 <span>
                                     <p>À la française</p>
@@ -119,16 +130,16 @@
                                 </span> 
                             </a>
                             <span class="heart">
-                                <i class="fa-solid fa-heart heart__full"></i>
-                                <i class="fa-regular fa-heart heart__empty"></i>
+                                <i class="fa-solid fa-heart heart--full"></i>
+                                <i class="fa-regular fa-heart heart--empty"></i>
                             </span>
                         </div>
                     </div>
                     <div class="card">
                         <a href="./le-delice-des-sens.html">
-                            <img src="./public/images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" />
+                            <img class="card__img" src="./public/images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" />
                         </a>
-                        <div>
+                        <div class="card__body">
                             <a href="./le-delice-des-sens.html">
                                 <span>
                                     <p>Le délice des sens</p>
@@ -136,18 +147,19 @@
                                 </span>
                             </a>
                             <span class="heart">
-                                <i class="fa-solid fa-heart heart__full"></i>
-                                <i class="fa-regular fa-heart heart__empty"></i>
+                                <i class="fa-solid fa-heart heart--full"></i>
+                                <i class="fa-regular fa-heart heart--empty"></i>
                             </span>
                         </div>
                     </div>
+                </div>
             </section>
         </main>
         <!-- FOOTER -->
         <footer>
             <div id="footer__box">
+                <p>ohmyfood</p>
                 <ul>
-                    <p>ohmyfood</p>
                     <li><i class="fa-solid fa-utensils"></i>Proposer un restaurant</li>
                     <li><i class="fa-solid fa-handshake-angle"></i>Devenir partenaire</li>
                     <li>Mentions légales</li>
