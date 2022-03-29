@@ -1,30 +1,29 @@
 /* ACCUEIL */
-#loading {
-    background-color: rgba(211, 211, 211, 1);
-    background: radial-gradient(circle, rgb(247, 247, 247) 0%, rgb(189, 189, 189) 100%);
-    position: relative;
-    opacity: 1;
+
+// CHARGEMENT
+#loading { // Position et fond du pictogramme
+    background-color: $color-grey;
+    background: radial-gradient(circle, $color-lightgrey 0%, darken($color-lightgrey, 10) 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    font-size: xx-large;             
     top: 0;
     bottom: 0;
     left: 0;
     right: 0;
-    z-index: 99;
-    position: fixed;
-    font-size: xx-large;        
-    animation: fade .8s both 4.2s ;
-    &__icon {
-        position: absolute;
-        top: 50%;
-        right: 50%;
+    z-index: 999;  
+    animation: loading_fade .8s both 3.8s;
+    &__icon { // Taille du pictogramme et rotation
         width: 28px;
-        height: 32px;   
-        animation: rotating .5s 3.5s, fade .8s 3.9s;
+        height: 32px;
+        animation: loading_rotate 500ms both 3.5s;
     }
-    .utensils-empty {
-        color: #4d4d4d;
+    .utensils-empty { // Animation de chargement
+        color: $color-grey;
         position: absolute;
         overflow: hidden;
-        height: 100%;
         animation: loading 2s forwards 1s;       
     }
     .utensils-full {
@@ -33,86 +32,84 @@
     }
 }
 
+// BARRE DE LOCALISATION ET DESCRIPTION
 #info {
-    display: flex;
-    flex-direction: column;
-    &__zone {
-        background-color: #e7e7e7;
+    &__zone { // Zone localisation version mobile
+        background-color: darken($color-lightgrey, 5);
         display: flex;
         justify-content: center;
-        &__location {
+        .location { // Localisation version tablet/desktop
             @include location;
-        }
-        @include tablet-only {
-            display: none;
+            @include tablet-only { 
+                display: none;
+            }
         }
     }
-    &__box {
+    &__box { // Zone description
         display: flex;
         flex-direction: column;
         align-items: center;
-        background-color: #f0f0f0;
-        box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
+        background-color: $color-lightgrey;
         text-align: center;
         padding: 40px;
-        @include tablet-only {
-            margin: 20px;
+        @include box-shadow-bottom($color-black);
+        @include tablet-only { // Bordures et marges info
+            margin: $margin-div;
             margin-top: 0px;
-            border-bottom-left-radius: 30px;
-            border-bottom-right-radius: 30px;
+            @include border($border);
+            border-top-left-radius: 0;
+            border-top-right-radius: 0;
         }
-        &--logo {
+        &--logo { // Logo en version tablet/desktop
             width: 32%;
             display: none;
             @include tablet-only {
                 display: initial;
             }
         }
-        &__location {
+        .location { // Localisation en version tablet/desktop
             @include location;
             display: none;
             @include tablet-only {
-                display: initial;
-                box-shadow: 0px 0px 10px #cfcfcf4f;
+                display: flex;
+                background-color: darken($color-lightgrey, 5);
+                @include box-shadow-bottom;
             }
         }
-        &--btn {
+        &--btn { // Bouton 
             @include button;
-            padding: 0px 50px;
+            padding: 0px 20px;
         }
     }
 }
 
-#fonctionnement {
-    margin: auto 40px 20px 20px ;
+#operation { // Zone fonctionnement
+    margin: $margin-div;
     position: relative;
     &__box {
         display: flex;
         flex-direction: column;
-        @include tablet-only {
+        @include tablet-only { // Alignement en tablet/desktop
             flex-direction: row;
         }
     }
 }
 
-#restaurant {
-    padding: 20px ;
-    background-color: #f0f0f0;
-    box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
-    @include tablet-only {
-        margin: 20px;
+#restaurants { // Zone restaurants
+    padding: $padding-div;
+    background-color: $color-lightgrey;
+    @include box-shadow-top;
+    @include tablet-only { // Bordures et marges en desktop/tablet
+        margin: $margin-div;
         margin-bottom: 0px;
-        border-top-left-radius: 30px;
-        border-top-right-radius: 30px;
+        @include border($border);
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
     }
     &__card {
-        @include tablet-only {
+        @include tablet-only { // Alignement des cartes
             display: flex;
             flex-wrap: wrap;
-            margin: 14px auto;
         }
     }
 }
-
-
-

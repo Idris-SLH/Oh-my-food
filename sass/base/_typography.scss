@@ -3,6 +3,7 @@ body {
     font-family: 'Roboto', sans-serif;
 }
 
+// Titres menus
 h1 {
     font-family: 'Shrikhand', cursive; 
     font-weight: 100;
@@ -13,14 +14,8 @@ a {
     color: currentColor;
     display: contents;
 }
-
-span {
-    > p:first-child {
-        font-weight: bold;
-    }
-}
-
-footer {
+// Logo footer
+#footer__box {
     p {
         font-family: 'Shrikhand', cursive; 
         font-size: large;

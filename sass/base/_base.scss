@@ -3,16 +3,16 @@
     box-sizing: border-box; /* Opera/IE 8+ */
     -moz-box-sizing: border-box; /* Firefox, autres Gecko */
     -webkit-box-sizing: border-box; /* Safari/Chrome, autres WebKit */
-   /* box-sizing est appliquÃƒÂ© ÃƒÂ  tous les ÃƒÂ©lÃƒÂ©ments */
 }
 html {
-    background: rgb(147,86,220);
-    background: linear-gradient(0deg, rgba(147,86,220,0.38699229691876746) 0%, rgba(153,226,208,0.40379901960784315) 100%);
-}
-body {
-    background: white;
-    max-width: 1200px;
-    margin: auto;    
-    box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
-    ;
+    // Fond desktop/tablet
+    background: $color-primary;
+    background: linear-gradient(0deg, rgba($color-primary,0.4) 0%, rgba($color-tertiary,0.4) 100%);
+    // Corps de page
+    body {
+        max-width: $width; // Largeur max du contenu
+        background: white;
+        margin: auto;    
+        @include box-shadow-top;
+        }
 }

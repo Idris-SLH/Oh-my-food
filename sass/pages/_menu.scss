@@ -1,5 +1,5 @@
 /* PAGES RESTAURANTS */
-#background {
+#background { // Image du restaurant
     img {
         height: 250px;
         width: 100%;
@@ -10,21 +10,22 @@
     }
 }
 
-/* TITRES */
-.restaurant {
-    padding: 20px ;
-    background-color: #f0f0f0;
-    box-shadow: rgb(0 0 0 / 15%) 0px -8px 10px 0px;
-    border-top-left-radius: 40px;
-    border-top-right-radius: 40px;
+/* PAGE DU RESTAURANT */
+.restaurant {  
     margin-top: -50px;
     position: relative;
-    .title {
-        position: relative;
+    padding: $padding-div;
+    background-color: $color-lightgrey;
+    @include box-shadow-top;
+    @include border($border);
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    
+    .title { // NOM DU RESTAURANT 
         display: flex;
         justify-content: space-between;
         align-items: center;
-        &__back {
+        &__back { // Fleche retour
             display: none;
             @include tablet-only {
                 display: initial;
@@ -34,46 +35,49 @@
             font-size: 25px;
         }
     }
-    &__menu {
+
+    &__menu { // ZONE DES MENUS
         display: flex;
         flex-direction: column;
-        @include tablet-only {
+        @include tablet-only { // Alignement en tablet/desktop
             flex-direction: row;
             justify-content: space-between;
         }
         /* MENU */
         .menu {
             position: relative;
-            animation: .6s menu_show 300ms;
             @include tablet-only {
-                animation: menu_show_tablet .6s both 300ms;
                 width: 32%;
-            }
-            &__title {
-                color: gray;
+            }                
+
+            &__title { // Type de plats
+                color: $color-grey;
                 text-transform: uppercase;
-                animation: menu_show .8s both 200ms; 
                 span {
                     border-bottom: solid 3px $color-tertiary;
                 }
+                @include menu_box;
             }
-            &__box {
+            &__box { // Plats
                 cursor: pointer;
-                background-color: white;
+                position: relative;
+                margin-bottom: $margin-div;
                 padding: 2px 50px 2px 15px;
-                margin-bottom: 15px;
-                border-radius: 0.8rem;
-                box-shadow: 0px 5px 10px #dddddd;
+                background-color: white;
+                @include border(0.8em);
                 overflow: hidden;
                 font-weight: bold;
-                position: relative;
-                transition: 400ms ease-in-out ;
+                transition: padding 350ms ease-in-out 50ms;
+                @include box-shadow-bottom;
                 @include menu_box;
-                p {
+                @include tablet-only {
+                    @include menu_box(menu_show_tablet);
+                }
+                p { // Ellipse 
                     text-overflow: ellipsis;
                     white-space: nowrap;
                     overflow: hidden;
-                    margin: 6px auto;
+                    margin: $margin-text auto;
                 }
                 &--recipe {
                     font-weight: normal;
@@ -84,30 +88,31 @@
                     bottom: 1px;
                     transition: 350ms ease-in-out 50ms;
                 }
-                &--validate {
-                    font-size: x-large;
-                    color: white;
-                    position: absolute;
-                    right: -60px;
-                    bottom: 0px;
-                    height: 100%;
-                    width: 60px;
-                    border-top-right-radius: 0.8rem;
-                    border-bottom-right-radius: 0.8rem;
+                &--validate { // Pictogramme validé et animation
+                    background-color: $color-tertiary;
                     display: flex;
                     justify-content: center;
                     align-items: center;
-                    background-color: $color-tertiary;
+                    font-size: x-large;
+                    color: white;
+                    position: absolute;
+                    width: 60px;
+                    right: -60px;
+                    bottom: 0px;
+                    height: 100%;
+                    @include border(0.8rem);
+                    border-top-left-radius: 0;
+                    border-bottom-left-radius: 0;
                     transition: 400ms ease-in-out;
                 }
-                &:hover {
+                &:hover { // Position du padding au survol
                     padding-right: 110px;
                     .menu__box--price {
                         right: 75px;
                     }
                     .menu__box--validate {
                         right: 0px;
-                        .fa-circle-check {
+                        .fa-circle-check { // Rotation du pictogramme
                             transform: rotate(360deg);
                             transition: transform 600ms 100ms;
                         }
@@ -116,13 +121,8 @@
             }
         }
     }
-    &__btn {
+    &__btn { // Bouton "Commander"
         @include button;
         padding: 0px 50px;
-        margin-bottom: 40px;
     }     
 }
-
-
-
-

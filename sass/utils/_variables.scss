@@ -1,8 +1,29 @@
+// Couleurs 
 $color-primary: #9356DC;
 $color-secondary: #FF79DA;
 $color-tertiary: #99E2D0;
-$vars : 1 2 3 4 5;
+$color-new: #0A8D6D;
+$color-grey: gray;
+$color-lightgrey: #f0f0f0;
+$color-darkgrey: #353535;
+$color-black: rgb(0 0 0 / 20%);
+$color-blacklight: rgb(0 0 0 / 10%);
+// Resolutions
+$width: 1200px;
 $breakpoints: (
     mobile: 599px,
     tablet : 891px
 );
+// Margin
+$margin-div: 15px;
+$margin-text: 6px;
+// Padding
+$padding-icon : 10px;
+$padding-card:  5px 12px;
+$padding-div: 20px;
+// Bordure
+$border: 30px;
+$border-bubble: 20px;
+$border-card: 1em; 
+// Variable menu_box
+$vars : 1 2 3 4 5;

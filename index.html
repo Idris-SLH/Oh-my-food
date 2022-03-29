@@ -30,22 +30,24 @@
         <main>
             <!-- SECTION LOCALISATION -->
             <section id="info">
-                <!-- Localisation -->
+                <!-- Localisation mobile -->
                 <div id="info__zone">
-                    <div id="info__zone__location">
-                        <p id="info__zone__location--city">Paris, Bellevile</p>
-                        <i class="fa-solid fa-location-dot" id="info__zone__location--icon"></i>
+                    <div class="location">
+                        <p class="location--city">Paris, Bellevile</p>
+                        <i class="fa-solid fa-location-dot location--icon"></i>
                     </div>
                 </div>
                 <!-- Info -->
                 <div id="info__box">
-                    <img id="info__box--logo" src="./public/images/logo/ohmyfood.png" alt="logo">
+                    <img id="info__box--logo" src="./public/images/logo/ohmyfood.png" alt="logo"> 
                     <h2>Réservez le menu qui vous convient</h2>
                     <p>Découvrez des restaurants d'exception, séléctionnés par nos soins.</p>
-                    <div id="info__box__location">
-                        <p id="info__box__location--city">Paris, Bellevile</p>
-                        <i class="fa-solid fa-location-dot" id="info__box__location--icon"></i>
+                    <!-- Localisation tablet/desktop -->
+                    <div class="location">
+                        <p class="location--city">Paris, Bellevile</p>
+                        <i class="fa-solid fa-location-dot location--icon"></i>
                     </div>
+                    <!-- Bouton -->
                     <div id="info__box--btn">
                         <a href="#restaurant">
                             <p>Explorer nos restaurants</p>
@@ -55,10 +57,10 @@
                 </div>
             </section>
             <!-- SECTION FONCTIONNEMENT -->
-            <section id="fonctionnement">
+            <section id="operation">
                 <h2>Fonctionnement</h2>
                 <!-- BULLES -->
-                <div id="fonctionnement__box">
+                <div id="operation__box">
                     <div class="bubble">
                         <p class="bubble__num">1</p>
                         <i class="fa-solid fa-mobile-screen-button bubble__icon"></i>
@@ -78,21 +80,22 @@
             </section>
 
             <!-- SECTION RERSTAURANTS -->
-            <section id="restaurant">
+            <section id="restaurants">
                 <h2>Restaurants</h2>
                 <!-- CARTES RERSTAURANTS -->
-                <div id="restaurant__card">
+                <div id="restaurants__card">
+                    <!-- CARTES -->
                     <div class="card">
                         <a href="./la-palette-du-gout.html">
-                            <img class="card__img" src="./public/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" />
+                            <img class="card__img" src="./public/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="" />
                         </a>
                         <p class="card__new">Nouveau</p>
                         <div class="card__body">
                             <a href="./la-palette-du-gout.html">
-                                <span>
+                                <div class="card__body--text">
                                     <p>La palette du goût</p>
                                     <p>Ménilmontant</p>
-                                </span>
+                                </div>
                             </a>
                             <span class="heart">
                                 <i class="fa-solid fa-heart heart--full"></i>
@@ -100,34 +103,36 @@
                             </span>
                         </div>
                     </div>
+                    <!-- CARTES -->
                     <div class="card">
                         <a href="./la-note-enchantee.html">
-                            <img class="card__img" src="./public/images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg" /> 
+                            <img class="card__img" src="./public/images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg" alt="" /> 
                         </a>
                         <p class="card__new">Nouveau</p>
                         <div class="card__body">
                             <a href="./la-note-enchantee.html">
-                                <span>
+                                <div class="card__body--text">
                                     <p>La note enchantée</p>
                                     <p>Charonne</p>
-                                </span>
+                                </div>
                             </a>
                             <span class="heart">
                                 <i class="fa-solid fa-heart heart--full"></i>
                                 <i class="fa-regular fa-heart heart--empty"></i>
                             </span>
                         </div>
-                    </div>                        
+                    </div>   
+                    <!-- CARTES -->                    
                     <div class="card">
                         <a href="./a-la-francaise.html">
-                            <img class="card__img" src="./public/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" /> 
+                            <img class="card__img" src="./public/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="" /> 
                         </a>
                         <div class="card__body">
                             <a href="./a-la-francaise.html">
-                                <span>
+                                <div class="card__body--text">
                                     <p>À la française</p>
                                     <p>Cité Rouge</p>
-                                </span> 
+                                </div> 
                             </a>
                             <span class="heart">
                                 <i class="fa-solid fa-heart heart--full"></i>
@@ -135,16 +140,17 @@
                             </span>
                         </div>
                     </div>
+                    <!-- CARTES -->
                     <div class="card">
                         <a href="./le-delice-des-sens.html">
-                            <img class="card__img" src="./public/images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" />
+                            <img class="card__img" src="./public/images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="" />
                         </a>
                         <div class="card__body">
                             <a href="./le-delice-des-sens.html">
-                                <span>
+                                <div class="card__body--text">
                                     <p>Le délice des sens</p>
                                     <p>Folie-Méricourt</p>
-                                </span>
+                                </div>
                             </a>
                             <span class="heart">
                                 <i class="fa-solid fa-heart heart--full"></i>
@@ -163,7 +169,7 @@
                     <li><i class="fa-solid fa-utensils"></i>Proposer un restaurant</li>
                     <li><i class="fa-solid fa-handshake-angle"></i>Devenir partenaire</li>
                     <li>Mentions légales</li>
-                    <li><a href="mailto: ohmyfood@contact.com">Contact</a></li>
+                    <li><a href="mailto:ohmyfood@contact.com">Contact</a></li>
                 </ul>
             </div>
         </footer>

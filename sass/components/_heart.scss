@@ -1,19 +1,19 @@
 /* FAVORIS */
 .heart {
-    padding: 10px;
     cursor: pointer;
     font-size: x-large;
-    &--full {
+    padding: $padding-icon;
+    &--full { // Coeur rempli et dégradé
+        position: absolute;
         background: -webkit-linear-gradient($color-primary, $color-secondary);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
-        opacity: 0;
-        position: absolute;
         z-index: 1;
+        opacity: 0;
         transition: opacity .3s ease-in-out ;
         &:hover {
             opacity: 1;
-            + .heart--empty {
+            + .heart--empty { // Coeur vide au survol
                 opacity: 0;
                 transition: opacity .1s ease-in-out ;
             }
