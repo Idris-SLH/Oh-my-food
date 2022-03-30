@@ -398,7 +398,7 @@ footer #footer__box ul li:hover {
   cursor: pointer;
   padding: 0px 10px;
 }
-#info__zone .location--city:hover + #location--icon {
+#info__zone .location--city:hover + .location--icon {
   animation: location 0.5s;
 }
 @media screen and (min-width: 891px) {
@@ -451,7 +451,7 @@ footer #footer__box ul li:hover {
   cursor: pointer;
   padding: 0px 10px;
 }
-#info__box .location--city:hover + #location--icon {
+#info__box .location--city:hover + .location--icon {
   animation: location 0.5s;
 }
 @media screen and (min-width: 891px) {

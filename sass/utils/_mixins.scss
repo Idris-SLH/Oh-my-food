@@ -63,7 +63,7 @@
         cursor: pointer;
         padding: 0px 10px;
         &:hover {
-            + #location--icon {
+            + .location--icon {
                 animation: location .5s;
             }
         }
