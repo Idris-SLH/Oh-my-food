@@ -240,9 +240,9 @@ a {
   align-items: center;
   background-color: white;
   padding: 5px 12px;
+  border-radius: 1em;
   border-top-left-radius: 0;
   border-top-right-radius: 0;
-  border-radius: 1em;
 }
 .card__body--text p:first-child {
   font-weight: bold;

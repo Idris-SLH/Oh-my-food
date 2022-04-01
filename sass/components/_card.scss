@@ -34,9 +34,9 @@
         align-items: center;
         background-color: white;
         padding: $padding-card;
+        @include border($border-card);
         border-top-left-radius: 0;
         border-top-right-radius: 0;
-        @include border($border-card);
         &--text p:first-child {
             font-weight: bold;
         }
